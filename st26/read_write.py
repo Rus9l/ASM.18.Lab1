@@ -7,7 +7,10 @@ class ReadWrite(MainClass):
     """
     Класс-потомок
     """
-    number = ''
+    # number = ''
+
+    def __init__(self):
+        self.number = None
 
     def read_from_console(self):
         """
@@ -19,7 +22,7 @@ class ReadWrite(MainClass):
         """
         Функция вывода в консоль
         """
-        print('Номер: ' + self.number)
+        print(f'Номер: {self.number}')
 
 
 if __name__ == '__main__':

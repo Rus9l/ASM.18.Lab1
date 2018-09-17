@@ -2,9 +2,12 @@
 
 
 class MainClass:
-    name = ''
-    age = ''
-    job = ''
+    # name = ''
+    # age = ''
+
+    def __init__(self):
+        self.name = None
+        self.age = None
 
     def read_from_console(self):
         """
@@ -12,15 +15,13 @@ class MainClass:
         """
         self.name = input('Введите имя: ')
         self.age = input('Введите возраст: ')
-        self.job = input('Введите должность: ')
 
     def print_to_console(self):
         """
         Функция вывода в консоль
         """
-        print('\nИмя: ' + self.name)
-        print('Возраст: ' + self.age)
-        print('Должность: ' + self.job)
+        print(f'\nИмя: {self.name}')
+        print(f'Возраст: {self.age}')
 
 
 if __name__ == '__main__':

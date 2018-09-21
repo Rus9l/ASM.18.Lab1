@@ -4,12 +4,13 @@ from .Group import Group
 G=Group()
     
 def main():
-    menu={'1':('ajout',G.Ajout),
-          '2':('print',G.Print),
-          '3':('write in file',G.WriteFile),
-          '4':('read file',G.ReadFile),
-          '5':('delete liste',G.Delete),
-          '6':('Exit',exit)
+    menu={'1':('ajout employe',G.AjoutE),
+          '2':('ajout other data',G.AjoutS),
+          '3':('print',G.Print),
+          '4':('write in file',G.WriteFile),
+          '5':('read file',G.ReadFile),
+          '6':('delete liste',G.Delete),
+          '7':('Exit',exit)
         } 
 
     for key in menu.keys():
@@ -17,13 +18,13 @@ def main():
 
     while True:
         choix=input('what u would do: ')
-        if choix=='6':
+        if choix=='7':
             break
 
         try:
             menu.get(choix)[1]()
         except:
-            print('Enter number between 1 and 6')
+            print('Enter number between 1 and 7')
             
             
             

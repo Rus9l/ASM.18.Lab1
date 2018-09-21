@@ -12,12 +12,17 @@ class Group:
         self.list=[]
         
         
-    def Ajout(self):
-        s=Supl()
+    def AjoutE(self):
+        emp=Employe()
         "Ajoute des elements dans la liste"
-        s.input()
-        self.list.append(s.output())
+        emp.input()
+        self.list.append(emp)
         print('-------------------------')
+
+    def AjoutS(self):
+        s=Supl()
+        s.input()
+        self.list.append(s)
             
     def Print(self):
         if len(self.list)==0:
@@ -45,13 +50,13 @@ class Group:
         self.file=input("Enter the name of file: ")
         try:
             with open(self.file,'rb') as fich:
-                read=pickle.load(fich)
+                self.list=pickle.load(fich)
         except:
             print("File doesn't exist")
             return
             print('-------------------------')
                 
-        print(read)
+        self.Print()
         print('-------------------------')
     def Delete(self):
         "Supprimer la liste"

@@ -17,4 +17,6 @@ class Employe:
         
     def __str__(self):
         "Les donnees des employes entrees"
-        return self.name,self.surname,self.tel
+        
+        return f"{self.name},{self.surname},{self.tel}"
+    

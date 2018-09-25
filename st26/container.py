@@ -67,7 +67,7 @@ class Container(TeacherCl):
                 system('cls')
                 c.del_list()
             else:
-                self.db.pop(target)
+                self.db.pop(target-1)
         except ValueError:
             print('Необходимо ввести номер.')
             sleep(0.5)
@@ -78,7 +78,7 @@ class Container(TeacherCl):
         """
         Чтение списка из файла
         """
-        list_file = input('Введите имя файла, который хотите открыть: ')
+        list_file = input('Введите имя файла(00 для выхода): ')
         if list_file == '00':
             exit(0)
         try:
@@ -101,6 +101,7 @@ class Container(TeacherCl):
             l_file = open(f'{list_file}', 'wb')
             pickle.dump(self.db, l_file, 2)
             print(f'\nФайл {list_file} сохранен')
+            l_file.close()
             sleep(2)
 
     def clear_list(self):

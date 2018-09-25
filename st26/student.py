@@ -1,30 +1,28 @@
 # -*- coding: utf-8 -*-
 
 
-class MainClass:
-    # name = ''
-    # age = ''
+class StudentCl:
 
     def __init__(self):
-        self.name = None
         self.age = None
+        self.group = None
 
     def read_from_console(self):
         """
         Функция чтения с консоли
         """
-        self.name = input('Введите имя: ')
-        self.age = input('Введите возраст: ')
+        self.age = input('Возраст: ')
+        self.group = input('Группа: ')
 
     def print_to_console(self):
         """
         Функция вывода в консоль
         """
-        print(f'\nИмя: {self.name}')
         print(f'Возраст: {self.age}')
+        print(f'\nГруппа: {self.group}')
 
 
 if __name__ == '__main__':
-    mc = MainClass()
-    mc.read_from_console
-    mc.print_to_console
+    st = StudentCl
+    st.read_from_console
+    st.print_to_console

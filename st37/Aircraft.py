@@ -5,7 +5,7 @@ from .Airbus import Airbus
 class Aircraft:
         
     def __init__(self):
-        self.aircraft = list()ы
+        self.aircraft = list()
         
     def input_cargoplane(self):
         ap = Cargoplane()

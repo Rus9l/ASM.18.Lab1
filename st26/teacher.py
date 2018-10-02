@@ -6,22 +6,19 @@ from .student import StudentCl
 class TeacherCl(StudentCl):
 
     def __init__(self):
-        self.tch = None
+        super().__init__()
+        self.input_teacher()
 
-    def read_from_console(self):
-        """
-        Функция чтения с консоли
-        """
-        self.tchr = input('Кафедра: ')
+    def __str__(self):
+        return f'[Преподаватель][{self.name}, {self.age}, {self.number}, {self.tch}]'
 
-    def print_to_console(self):
-        """
-        Функция вывода в консоль
-        """
-        print(f'Кафедра: {self.tchr}')
+    def input_teacher(self):
+        self.tch = input('Кафедра: ')
+
+    def edit(self):
+        self.input_student()
+        self.input_teacher()
 
 
 if __name__ == '__main__':
-    tch = TeacherCl()
-    tch.read_from_console
-    tch.print_to_console
+    pass

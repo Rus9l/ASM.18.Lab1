@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import pickle
+from pickle import dump, load
 from time import sleep
 from os import system
 
@@ -8,105 +8,110 @@ from .teacher import TeacherCl
 from .student import StudentCl
 
 
-class Container(TeacherCl):
+class Container:
 
     db = []
 
-    def __init__(self):
-        self.name = None
-
     def add_list_student(self):
         """
-        Добавление студента в список
+        Добавление студента в список.
         """
-        st = StudentCl()
         print('Заполните данные:')
-        self.name = input('ФИО: ')
-        st.read_from_console()
-        self.db.append(f'ФИО: {self.name}, Возраст: {st.age}, Группа: {st.group}')
+        std = StudentCl()
+        self.db.append(std)
         system('cls')
-        print(f'\n{self.name} добавлен в список.')
-        sleep(2)   # пауза 2 секунды перед выходм в меню
+        print(f'\nСтудент добавлен в список.')
+        sleep(2)
 
     def add_list_teacher(self):
         """
-        Добавление преподавателя в список
+        Добавление преподавателя в список.
         """
-        tch = TeacherCl()
         print('Заполните данные:')
-        self.name = input('ФИО: ')
-        tch.read_from_console()
-        self.db.append(f'ФИО: {self.name}, Кафедра: {tch.tchr}')
+        tch = TeacherCl()
+        self.db.append(tch)
         system('cls')
-        print(f'\n{self.name} добавлен в список.')
+        print(f'\nПреподаватель добавлен в список.')
         sleep(2)
 
-    def get_list(self):
+    def edit_list(self):
         """
-        Вывод списка
+        Редактирование записи в списке.
         """
-        if self.db == []:
-            print('Список пуст.\n')
-        else:
-            i = 0
-            x = 1
-            while x <= len(self.db):
-                print(f'{i+1}. ' + self.db[i])
-                x += 1
-                i += 1
-        input('\nДля продолжения нажмите ENTER')  # задержка возврата в меню
-
-    def del_list(self):
-        c = Container()
-        c.get_list()
+        self.get_list()
         try:
-            target = int(input('Введите номер удаляемого человека: '))
-            if target > len(self.db):
-                print('В списке нет такого номера.')
-                sleep(0.5)
-                system('cls')
-                c.del_list()
-            else:
-                self.db.pop(target-1)
+            target = int(input('Введите номер редактируемого человека: '))
+            self.db[target - 1].edit()
+            print('Список отредактирован.')
+            sleep(0.5)
+        except IndexError:
+            print('В списке нет такого номера.')
+            sleep(0.5)
+            self.edit_list()
         except ValueError:
             print('Необходимо ввести номер.')
             sleep(0.5)
-            system('cls')
-            c.del_list()
+            self.edit_list()
+
+    def get_list(self):
+        """
+        Вывод списка.
+        """
+        if self.db == []:
+            print('Список пуст.')
+        else:
+            for i, item in enumerate(self.db, start=1):
+                print(f'{i}. {item}')
+        sleep(2)
+
+    def del_list(self):
+        """
+        Удаление записи из списка.
+        """
+        self.get_list()
+        try:
+            target = int(input('Введите номер удаляемого человека: '))
+            self.db.pop(target)
+        except IndexError:
+            print('В списке нет такого номера.')
+            sleep(0.5)
+            self.del_list()
+        except ValueError:
+            print('Необходимо ввести номер.')
+            sleep(0.5)
+            self.del_list()
 
     def read_list(self):
         """
-        Чтение списка из файла
+        Загрузка списка из файла.
         """
         list_file = input('Введите имя файла(00 для выхода): ')
         if list_file == '00':
             exit(0)
         try:
-            lst = open(f'{list_file}', 'rb')
-            self.db += pickle.load(lst)
-            lst.close()
+            with open(f'{list_file}', 'rb') as lst:
+                self.db += load(lst)
         except FileNotFoundError:
             print(f'Файл {list_file} не найден.')
-            Container().read_list()
+            self.read_list()
 
     def write_list(self):
         """
-        Запись списка в файл
+        Запись списка в файл.
         """
         list_file = input('Введите имя для сохраняемого списка: ')
         if list_file == '00':
             print('Выберите другои имя фвйла.')
             Container().write_list()
         else:
-            l_file = open(f'{list_file}', 'wb')
-            pickle.dump(self.db, l_file, 2)
+            with open(f'{list_file}', 'wb') as l_file:
+                dump(self.db, l_file, 2)
             print(f'\nФайл {list_file} сохранен')
-            l_file.close()
             sleep(2)
 
     def clear_list(self):
         """
-        Очистка списка
+        Очистка списка.
         """
         q = input('Вы уверены, что хотите очистить список? (Н/д): ').lower()
         if q == 'д' or q == 'y' or q == 'да' or q == 'yes':

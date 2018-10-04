@@ -1,28 +1,21 @@
 # -*- coding: utf-8 -*-
 
-
 class StudentCl:
 
     def __init__(self):
-        self.age = None
-        self.group = None
+        self.input_student()
 
-    def read_from_console(self):
-        """
-        Функция чтения с консоли
-        """
+    def __str__(self):
+        return f'[Студент][{self.name}, {self.age}, {self.number}]'
+
+    def input_student(self):
+        self.name = input('ФИО: ')
         self.age = input('Возраст: ')
-        self.group = input('Группа: ')
+        self.number = input('Телефон: ')
 
-    def print_to_console(self):
-        """
-        Функция вывода в консоль
-        """
-        print(f'Возраст: {self.age}')
-        print(f'\nГруппа: {self.group}')
+    def edit(self):
+        self.input_student()
 
 
 if __name__ == '__main__':
-    st = StudentCl
-    st.read_from_console
-    st.print_to_console
+    pass

@@ -16,28 +16,30 @@ import st43.main
 import st37.main
 import st15.main
 import st32.main
+import st39.main
 #	добавить импорт своего модуля по шаблону 
 #	import st<номер по журналу>.main
 
 MENU = [
         ["[00] Образец", st00.main.main],
-	["[04] Василевский", st04.main.main],
+	     ["[04] Василевский", st04.main.main],
         ["[06] Василюк", st06.main.main],
-		["[10] Гордиенко", st10.main.main],
+		  ["[10] Гордиенко", st10.main.main],
         ["[34] Сурков", st34.main.main],
         ["[41] Шнякин", st41.main.main],
         ["[28] Рамазанов", st28.main.main],
-    ["[26] Печенкин", st26.main.main_menu],
-	["[23] Машуров", st23.main.main],
-	["[08] Винокуров", st08.main.main],
-	["[33] Смирнов", st33.main.main],
+        ["[26] Печенкин", st26.main.main_menu],
+	     ["[23] Машуров", st23.main.main],
+	     ["[08] Винокуров", st08.main.main],
+	     ["[33] Смирнов", st33.main.main],
         ["[45] Соанху", st45.main.main],
         ["[19] Левочко", st19.main.main],
         ["[29] Редька", st29.main.main],
         ["[43] Шушпанникова", st43.main.main],
         ["[37] Шептухин", st37.main.main],
         ["[15] Казак", st15.main.main],
-	["[32] Сазонов", st32.main.main],
+	     ["[32] Сазонов", st32.main.main],
+        ["[39] Шилов", st39.main.main] 
 #		добавить пункт меню для вызова своей главной функции по шаблону:
 #		["[<номер по журналу>] <Фамилия>", <ссылка на функцию>],
 	]

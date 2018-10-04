@@ -21,14 +21,17 @@ class Boss(Worker):
         self.experience = ''
 
     def __str__(self):
-        return f'Директор отдела. {self.name}, {self.age}, {self.academic_title}'
+        return f'Директор отдела. {self.name}, {self.age}, {self.experience}'
 
-    def vvod_b(self):
+    def input_b(self):
         self.name = input("Имя директора отдела: ")
         self.age = input("Возраст директора отдела: ")
-        self.academic_title = input("Стаж директора отдела: ")
+        self.experience = input("Стаж директора отдела: ")
 
-    def vivod_b(self):
+    def edit(self):
+        self.input_b()
+
+    def output_b(self):
         print("Директор отдела: ", self.name)
         print("Возраст: ", self.age)
         print("Стаж: ", self.experience)
@@ -36,5 +39,5 @@ class Boss(Worker):
 
 if __name__ == '__main__':
     b = Boss()
-    b.vvod_b()
-    b.vivod_b()
+    b.input_b()
+    b.output_b()

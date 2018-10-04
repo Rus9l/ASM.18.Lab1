@@ -20,17 +20,31 @@ class Otdel:
 
     def add_worker(self):
         worker = Worker()
-        worker.vvod_w()
+        worker.input_w()
         self.ll.append(worker)
 
     def add_boss(self):
         boss = Boss()
-        boss.vvod_b()
+        boss.input_b()
         self.ll.append(boss)
 
-    def vivod_spiska(self):
+    def output_spiska(self):
         for Number, Object in enumerate(self.ll, start=1):
             print(Number, Object)
+
+    def redact(self):
+        self.output_spiska()
+        num = input('Введите номер объекта: ')
+        """
+        В модуль boss и worker добавлен метод edit, который вызывает
+        метод ввода в соответствующем модуле.
+        Т.к. в список записывается объект класса, достаточно вызвать метод
+        edit к выбранному объекту из списка.
+        int(num) - 1 т.к. список нумеруется с 0, соответственно 1 человек в
+        выводе списка будет иметь 0 позицию в самом списке.
+        """
+        self.ll[int(num) - 1].edit()
+        print('Редактировано')
 
     def write_file(self):
         file = open("spisok.dat", "wb")

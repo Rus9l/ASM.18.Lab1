@@ -19,19 +19,22 @@ def main():
     4 - записать в файл
     5 - загрузить из файла
     6 - очистить список
+    7 - редактировать список
     ''')
     if choice == '1':
         work.add_worker()
     elif choice == '2':
         work.add_boss()
     elif choice == '3':
-        work.vivod_spiska()
+        work.output_spiska()
     elif choice == '4':
         work.write_file()
     elif choice == '5':
         work.read_file()
     elif choice == '6':
         work.clear()
+    elif choice == '7':
+        work.redact()
     main()
 
 

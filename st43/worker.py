@@ -23,13 +23,16 @@ class Worker():
         return f'Сотрудник. {self.name}, {self.age}, {self.otdel}, {self.position}'
 
 # методы
-    def vvod_w(self):
+    def input_w(self):
         self.name = input("Имя сотрудника: ")
         self.age = input("Возраст сотрудника: ")
         self.otdel = input("Отдел сотрудника: ")
         self.position = input("Должность сотрудника: ")
 
-    def vivod_w(self):
+    def edit(self):
+        self.input_w()
+
+    def output_w(self):
         print("Сотрудник: ", self.name)
         print("Возраст: ", self.age)
         print("Отдел: ", self.otdel)
@@ -38,8 +41,8 @@ class Worker():
 
 if __name__ == '__main__':
     w = Worker()
-    w.vvod_w()
-    w.vivod_w()
+    w.input_w()
+    w.output_w()
 
 
 

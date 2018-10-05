@@ -44,7 +44,7 @@ class Autopark:
         if len(self.list_of_autopark) != 0:
             print("Select number of truck for delete: ")
             num_del = int(input())
-            if (num_edt>0) and (num_del<len(self.list_of_autopark)+1):
+            if (num_del>0) and (num_del<len(self.list_of_autopark)+1):
             	self.list_of_autopark.pop(num_del-1)
             	print("Truck number {} is delete\n".format(num_del))
             else:

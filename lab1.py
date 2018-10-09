@@ -32,6 +32,7 @@ MENU = [
         ["[17] Шестакова", st17.main.main],
 	["[19] Левочко", st19.main.main],
 	["[23] Машуров", st23.main.main],
+	["[25] Оберемок", st25.main.main_menu],
 	["[26] Печенкин", st26.main.main_menu],
 	["[28] Рамазанов", st28.main.main],
 	["[29] Редька", st29.main.main],

@@ -12,6 +12,7 @@ import st33.main
 import st28.main
 import st45.main
 import st19.main
+import st25.main
 import st29.main
 import st43.main
 import st37.main

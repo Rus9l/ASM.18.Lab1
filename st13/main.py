@@ -1,4 +1,4 @@
-from spisok import Spisok
+from .spisok import Spisok
 
 spisok = Spisok()
 

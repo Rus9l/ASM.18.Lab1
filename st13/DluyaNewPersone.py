@@ -1,4 +1,4 @@
-from DataPersone import DataPersone
+from .DataPersone import DataPersone
 
 class DluyaNewPersone(DataPersone):
 

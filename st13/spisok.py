@@ -1,5 +1,5 @@
-from DataPersone import DataPersone
-from DluyaNewPersone import DluyaNewPersone
+from .DataPersone import DataPersone
+from .DluyaNewPersone import DluyaNewPersone
 import pickle
 
 class Spisok:

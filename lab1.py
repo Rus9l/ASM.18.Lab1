@@ -30,7 +30,7 @@ MENU = [
         ["[06] Василюк", st06.main.main],
 	["[08] Винокуров", st08.main.main],
 	["[10] Гордиенко", st10.main.main],
-    ["[13] Деордице", st13.main.main],
+    ["[13] Деордице Д", st13.main.main],
 	["[15] Казак", st15.main.main],
         ["[17] Шестакова", st17.main.main],
 	["[19] Левочко", st19.main.main],

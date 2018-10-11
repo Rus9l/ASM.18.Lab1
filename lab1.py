@@ -1,5 +1,4 @@
-﻿# -*- coding: utf-8 -*-
-import st00.main
+﻿import st00.main
 import st03.main
 import st04.main
 import st06.main

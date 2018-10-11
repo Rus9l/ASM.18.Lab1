@@ -1,4 +1,5 @@
-﻿import st00.main
+﻿# -*- coding: utf-8 -*-
+import st00.main
 import st03.main
 import st04.main
 import st06.main
@@ -24,11 +25,13 @@ import st32.main
 import st39.main
 import st40.main
 import st31.main
+import st02.main
 #	добавить импорт своего модуля по шаблону 
 #	import st<номер по журналу>.main
 
 MENU = [
         ["[00] Образец", st00.main.main],
+		["[02] Аметова", st02.main.main],
 		["[03] Васенков", st03.main.main],
 	["[04] Василевский", st04.main.main],
         ["[06] Василюк", st06.main.main],

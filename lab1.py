@@ -1,5 +1,5 @@
 ﻿import st00.main
-import st03.main
+#import st03.main
 import st04.main
 import st06.main
 import st07.main
@@ -33,7 +33,7 @@ import st35.main
 MENU = [
         ["[00] Образец", st00.main.main],
 		["[02] Аметова", st02.main.main],
-		["[03] Васенков", st03.main.main],
+		#["[03] Васенков", st03.main.main],
 	["[04] Василевский", st04.main.main],
         ["[06] Василюк", st06.main.main],
         ["[07] Вильданов", st07.main.main],

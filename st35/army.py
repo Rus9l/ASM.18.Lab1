@@ -27,11 +27,9 @@ class Army:
             print('Ни душы')
             return
 
-        print('------------------------------')
         for p in self.serviceman:
             print('\t', p.__class__.__name__)
             p.display()
-            print('------------------------------')
 
 
     def edit_serviceman(self):

@@ -17,10 +17,8 @@ MENU = [
 def main():
 
     while True:
-        print('------------------------------')
         for i, item in enumerate(MENU, start=1):
             print('{0}: {1}'.format(i, item[0]))
-        print('------------------------------')
 
 
         try:

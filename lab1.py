@@ -23,7 +23,7 @@ import st15.main
 import st32.main
 import st39.main
 import st40.main
-import st31.main
+#import st31.main
 import st02.main
 import st46.main
 import st35.main
@@ -44,11 +44,11 @@ MENU = [
         ["[17] Шестакова", st17.main.main],
 	["[19] Левочко", st19.main.main],
 	["[23] Машуров", st23.main.main],
-	["[25] Оберемок", st25.main.main_menu],
+	["[25] Оберемок", st25.main.main],
 	["[26] Печенкин", st26.main.main_menu],
 	["[28] Рамазанов", st28.main.main],
 	["[29] Редька", st29.main.main],
-	["[31] Рыжих", st31.main.main],
+#	["[31] Рыжих", st31.main.main],
 	["[32] Сазонов", st32.main.main],
 	["[33] Смирнов", st33.main.main],
         ["[34] Сурков", st34.main.main],

@@ -11,5 +11,5 @@ class Human:
     def print(self):
         print("Name:", self.__name)
         print("Age:", self.__age)
-        print("Sex:", self.__age)
+        print("Sex:", self.__sex)
         

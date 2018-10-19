@@ -1,8 +1,15 @@
 ﻿import st00.main
+import st03.main
 import st04.main
 import st06.main
+import st07.main
 import st10.main
+<<<<<<< HEAD
+import st38.main
+=======
+import st13.main
 import st17.main
+>>>>>>> 7445e94eca91609845673d62c9b007de13516645
 import st34.main
 import st41.main
 import st26.main
@@ -12,6 +19,7 @@ import st33.main
 import st28.main
 import st45.main
 import st19.main
+import st25.main
 import st29.main
 import st43.main
 import st37.main
@@ -19,17 +27,21 @@ import st15.main
 import st32.main
 import st39.main
 import st40.main
+#import st31.main
+import st02.main
+import st46.main
+import st35.main
 #	добавить импорт своего модуля по шаблону 
 #	import st<номер по журналу>.main
 
 MENU = [
+<<<<<<< HEAD
         ["[00] Образец", st00.main.main],
 	["[04] Василевский", st04.main.main],
         ["[06] Василюк", st06.main.main],
 	["[08] Винокуров", st08.main.main],
 	["[10] Гордиенко", st10.main.main],
 	["[15] Казак", st15.main.main],
-        ["[17] Шестакова", st17.main.main],
 	["[19] Левочко", st19.main.main],
 	["[23] Машуров", st23.main.main],
 	["[26] Печенкин", st26.main.main_menu],
@@ -39,12 +51,44 @@ MENU = [
 	["[33] Смирнов", st33.main.main],
         ["[34] Сурков", st34.main.main],
 	["[37] Шептухин", st37.main.main],
+        ["[38] Шестакова", st38.main.main],
 	["[39] Шилов", st39.main.main],
 	["[40] Шкуренков", st40.main.main],
         ["[41] Шнякин", st41.main.main],
 	["[43] Шушпанникова", st43.main.main],     
         ["[45] Соанху", st45.main.main],
         
+=======
+		["[00] Образец", st00.main.main],
+		["[02] Аметова", st02.main.main],
+		["[03] Васенков", st03.main.main],
+		["[04] Василевский", st04.main.main],
+		["[06] Василюк", st06.main.main],
+		["[07] Вильданов", st07.main.main],
+		["[08] Винокуров", st08.main.main],
+		["[10] Гордиенко", st10.main.main],
+		["[13] Деордице Д", st13.main.main],
+		["[15] Казак", st15.main.main],
+		["[17] Шестакова", st17.main.main],
+		["[19] Левочко", st19.main.main],
+		["[23] Машуров", st23.main.main],
+		["[25] Оберемок", st25.main.main],
+		["[26] Печенкин", st26.main.main_menu],
+		["[28] Рамазанов", st28.main.main],
+		["[29] Редька", st29.main.main],
+#	["[31] Рыжих", st31.main.main],
+		["[32] Сазонов", st32.main.main],
+		["[33] Смирнов", st33.main.main],
+		["[34] Сурков", st34.main.main],
+		["[35] Федоров", st35.main.main],
+		["[37] Шептухин", st37.main.main],
+		["[39] Шилов", st39.main.main],
+		["[40] Шкуренков", st40.main.main],
+		["[41] Шнякин", st41.main.main],
+		["[43] Шушпанникова", st43.main.main],     
+		["[45] Соанху", st45.main.main],
+		["[46] Жаманкин", st46.main.main],
+>>>>>>> 7445e94eca91609845673d62c9b007de13516645
         
         
         

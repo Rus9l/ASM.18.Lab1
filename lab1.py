@@ -37,6 +37,7 @@ import st35.main
 MENU = [
 <<<<<<< HEAD
         ["[00] Образец", st00.main.main],
+	["[03] Васенков", st03.main.main],
 	["[04] Василевский", st04.main.main],
         ["[06] Василюк", st06.main.main],
 	["[08] Винокуров", st08.main.main],

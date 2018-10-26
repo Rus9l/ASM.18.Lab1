@@ -1,4 +1,7 @@
-from cityResidents import CityResidents
+if __name__ == '__main__':
+    from cityResidents import CityResidents
+else:
+    from .cityResidents import CityResidents
 
 myCity = CityResidents()
 

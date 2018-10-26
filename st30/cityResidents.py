@@ -1,5 +1,10 @@
-from human import Human
-from worker import Worker
+if __name__ == '__main__':
+    from human import Human
+    from worker import Worker
+else:
+    from .human import Human
+    from .worker import Worker
+
 import pickle 
 
 class CityResidents:

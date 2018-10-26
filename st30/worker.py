@@ -1,4 +1,7 @@
-from human import Human
+if __name__ == '__main__':
+    from human import Human
+else:
+    from .human import Human
 
 class Worker(Human):
     

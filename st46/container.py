@@ -24,13 +24,13 @@ class Container:
             print(i+1,self.list[i])        
     
     def save(self):
-        with open('Camera','wb') as fich:
+        with open('Camera.dat','wb') as fich:
             pickle.dump(self.list,fich)   
         print('Успешно!')
     
     
     def open(self):
-        with open('Camera','rb') as fich:
+        with open('Camera.dat','rb') as fich:
             self.list=pickle.load(fich)
         self.show()
 

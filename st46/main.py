@@ -1,30 +1,27 @@
 """@author: Рахиль Жаманкин"""
 from .container import Container
+    
+camera = Container()
+
+menu = [
+        ["Добавить DSLR", camera.add_dslr],
+        ["Добавить SLR", camera.add_slr],
+        ["Показать список камер", camera.show],
+        ["Записать в файл", camera.save],
+        ["Загрузить список из файла", camera.open],
+        ["Очистить список", camera.clear],
+        ["Выход"]
+    ]
+
 def main():
-    camera = Container()
-    choice = input('''
-    1 - Добавить DSLR
-    2 - Добавить SLR
-    3 - Показать список камер
-    4 - Сохранить в файл
-    5 - Показать из файла
-    6 - Очистить список
-    ''')
-    
-    if choice == '1':
-        camera.add_dslr()
-    elif choice == '2':
-        camera.add_slr()
-    elif choice == '3':
-        camera.show()
-    elif choice == '4':
-        camera.save()
-    elif choice == '5':
-        camera.open()
-    elif choice == '6':
-        camera.clear()
-    
-    main()
-    
+    i = 0
+    for item in menu:
+        print("{0:2}. {1}".format(i, item[0]))
+        i += 1
+    num = int(input("Введите пункт меню: "))
+    if num != 6:
+        menu[num][1]()
+        main()
+
 if __name__ == '__main__':
-    main()
+	main()

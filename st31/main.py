@@ -1,45 +1,25 @@
-from .container import *
+from container import Container
+cont = Container()
 
 def main():
-    c = Container()
-    while True:
-        choice = input
-        ('''
-                        1 - добавить книгу
-                        2 - добавить журнал
-                        3 - редактировать выбранное издание
-                        4 - удалить выбранное издание
-                        5 - удалить все
-                        6 - записать в файл
-                        7 - считать с файла
-                        8 - вывести список
-        ''')
-        
-        if choice == '1':
-                        c.add_book           #добавление книги
-         
-        elif choice == '2':
-                        c.add_bbook      #добавление журнала
-                        
-        elif choice == '3':
-                        c.edit              # редактирование
-                        
-        elif choice == '4':
-                        c.delete            # удаление
-                        
-        elif choice == '5':
-                        c.clear_container   # очистка
-            
-        elif choice == '6':
-                        c.write_in_file     #сохранение в файл
-            
-        elif choice == '7':
-                        c.read_from_file    #чтение из файла
-            
-        elif choice == '8':
-                        c.show              #вывод
+    menu={'1':('добавить книгу',cont.add_book),
+          '2':('добавить журнал',cont.add_bbook),
+          '3':('вывести список',cont.show),
+          '4':('записать в файл',cont.write_in_file),
+          '5':('считать с файла',cont.read_from_file ),
+          '6':('удалить все',cont.clear_container),
+          '0':('выход',exit)
+        } 
 
+    for i in menu.keys():
+        print(i,'',menu[i][0])
+
+    while True:
+        choice=input('Ваш выбор: ')
+        if choice=='0':
+            break
+        menu.get(choice)[1]()
 
 
 if __name__ == '__main__':
-	main()
+    main()

@@ -1,19 +1,18 @@
-from .book import *
+from book import book
 
-class bbook(book):    #класс журнала
-    def __init__(self): #определение метода для класса, выполняется сразу после
-                        #создания экзепляра класса 
-        b().__init__()
+class bbook(book):    
+    def __init__(self): 
+        book.__init__(self)
         self.publ = None  #self-текущий экзепляр класса
         self.num = None
 
-    @property           #свойство
+
     def input(self):
-        b().input
+        book.input(self)
         self.publ = input('Введите издательство: ')    #издательство
         self.num = input('Введите номер: ')  #номер
 
-    @property
+   
     def print(self):
         print('''
 автор: {0}
@@ -21,13 +20,5 @@ class bbook(book):    #класс журнала
 год: {2}
 издательство: {3}
 номер: {4}
-'''.format(self.author,
-            self.name,
-            self.year,
-            self.publ,
-            self.num
-            )
-              )
+'''.format(self.author,self.name, self.year,self.publ,self.num))
     
-        
-a = bbook()

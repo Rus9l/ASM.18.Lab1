@@ -1,6 +1,9 @@
-
-from book import book
-from bbook import bbook
+if __name__ == '__main__':
+    from book import book
+    from bbook import bbook
+else:
+    from .book import book
+    from .bbook import bbook
 
 import pickle
 
@@ -13,15 +16,15 @@ class Container():
 
     
     def add_book(self):
-        book = book()
-        book.input()
-        self.container.append(book)
+        bk = book()
+        bk.input()
+        self.container.append(bk)
 
     
     def add_bbook(self):
-        bbook = bbook()
-        bbook.input()
-        self.container.append(bbook)
+        bbk = bbook()
+        bbk.input()
+        self.container.append(bbk)
 
        
     def clear_container(self):
@@ -31,8 +34,8 @@ class Container():
 
     
     def show(self):
-        for book in self.container:
-            book.print()
+        for bk in self.container:
+            bk.print()
                        
     
     def write_in_file(self):

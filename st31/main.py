@@ -1,4 +1,8 @@
-from container import Container
+if __name__ == '__main__':
+    from container import Container
+else:
+    from .container import Container
+
 cont = Container()
 
 def main():

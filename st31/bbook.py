@@ -1,4 +1,8 @@
-from book import book
+if __name__ == '__main__':
+    from book import book
+else:
+    from .book import book
+
 
 class bbook(book):    
     def __init__(self): 

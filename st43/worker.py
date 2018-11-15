@@ -1,52 +1,17 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-"""
-Created on Fri Sep 28 10:03:50 2018
-
-@author: Shush_000
-"""
-
-class Worker():
-# метод вызывается всякий раз, когда вы создаете (или создаете экземпляр) объект
-# на основе этого класса
-# Слово self это способ описания любого объекта
-
-    def __init__(self):
-# атрибуты
-        self.name = ''
-        self.age = ''
-        self.otdel = ''
-        self.position = ''
-
-    def __str__(self):
-        return f'Сотрудник. {self.name}, {self.age}, {self.otdel}, {self.position}'
-
-# методы
-    def input_w(self):
-        self.name = input("Имя сотрудника: ")
-        self.age = input("Возраст сотрудника: ")
-        self.otdel = input("Отдел сотрудника: ")
-        self.position = input("Должность сотрудника: ")
-
-    def edit(self):
-        self.input_w()
-
-    def output_w(self):
-        print("Сотрудник: ", self.name)
-        print("Возраст: ", self.age)
-        print("Отдел: ", self.otdel)
-        print("Должность: ", self.position)
-
-
-if __name__ == '__main__':
-    w = Worker()
-    w.input_w()
-    w.output_w()
-
-
-
-
-
-
-
+class Worker:
+        def __init__(self, name='name', age='age', otdel='otdel', position='position'):
+            name = input('Введите имя: ')
+            age = int(input('Введите возраст: '))
+            otdel = input('Введите отдел: ')
+            position=input('Введите должность: ')     
+            self.name = name
+            self.age = age
+            self.otdel = otdel
+            self.position= position
+        def WritePerson(self):
+            print('Имя: ',self.name, 'Возраст:',self.age,'Город: ', self.otdel,'Должность: ', self.position )
+        def EditPerson(self):
+                self.name=input('Введите новое имя: ')
+                self.age=input('Введите новый возраст: ')
+                self.otdel=input('Введите новый отдел: ')
+                self.position=input('Введите новую должность: ')
